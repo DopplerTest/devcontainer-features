@@ -1,0 +1,20 @@
+{
+  "name": "Doppler CLI",
+  "id": "doppler-cli",
+  "version": "1.0.0",
+  "description": "A feature that installs the Doppler CLI",
+  "documentationURL": "https://github.com/dopplerhq/devcontainer-features/tree/main/src/doppler-cli",
+  "containerEnv": {
+    "DOPPLER_CONFIG_DIR": "/doppler"
+  },
+  "mounts": [
+      { 
+        "source": "doppler-cli-user-config",
+        "target": "/doppler",
+        "type": "volume"
+      }
+  ],
+  "installsAfter": [
+      "ghcr.io/devcontainers/features/common-utils"
+  ]
+}

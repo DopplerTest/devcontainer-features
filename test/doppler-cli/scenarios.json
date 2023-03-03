@@ -1,0 +1,14 @@
+{
+    "doppler_cli_installed": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "doppler-cli": {}
+        }
+    },
+    "doppler_cli_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "doppler-cli": {}
+        }
+    }
+}
