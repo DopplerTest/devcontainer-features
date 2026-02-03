@@ -7,12 +7,17 @@
 
 set -e
 
-# Optional: Import test library bundled with the devcontainer CLI
-# Provides the 'check' and 'reportResults' commands.
+# Import test library bundled with the devcontainer CLI
 source dev-container-features-test-lib
 
-check "version" doppler -v
+# Check CLI is installed and executable
+check "doppler is installed" command -v doppler
+
+# Check version outputs valid semver format
+check "version format" bash -c "doppler -v | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+'"
+
+# Check CLI responds to help
+check "help output" bash -c "doppler -h | grep 'The official Doppler CLI'"
 
 # Report results
-# If any of the checks above exited with a non-zero exit code, the test will fail.
 reportResults

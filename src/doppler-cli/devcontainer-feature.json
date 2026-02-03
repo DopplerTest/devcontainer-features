@@ -1,20 +1,17 @@
 {
-  "name": "Doppler CLI",
   "id": "doppler-cli",
   "version": "1.0.0",
-  "description": "A feature that installs the Doppler CLI",
-  "documentationURL": "https://github.com/dopplerhq/devcontainer-features/tree/main/src/doppler-cli",
-  "containerEnv": {
-    "DOPPLER_CONFIG_DIR": "/doppler"
+  "name": "Doppler CLI",
+  "description": "Installs the Doppler CLI for secrets management.",
+  "options": {
+    "version": {
+      "type": "string",
+      "default": "latest",
+      "description": "Version of the Doppler CLI to install (e.g., '3.67.0' or 'latest')"
+    }
   },
-  "mounts": [
-      { 
-        "source": "doppler-cli-user-config",
-        "target": "/doppler",
-        "type": "volume"
-      }
-  ],
+  "licenseURL": "https://github.com/DopplerHQ/devcontainer-features/blob/main/LICENSE",
   "installsAfter": [
-      "ghcr.io/devcontainers/features/common-utils"
+    "ghcr.io/devcontainers/features/common-utils"
   ]
 }

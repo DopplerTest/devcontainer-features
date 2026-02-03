@@ -1,14 +1,40 @@
 {
-    "doppler_cli_installed": {
+    "latest_on_ubuntu": {
+        "image": "ubuntu:latest",
+        "features": {
+            "doppler-cli": {}
+        }
+    },
+    "latest_on_debian": {
+        "image": "debian:latest",
+        "features": {
+            "doppler-cli": {}
+        }
+    },
+    "latest_on_alpine": {
+        "image": "alpine:latest",
+        "features": {
+            "doppler-cli": {}
+        }
+    },
+    "latest_on_fedora": {
+        "image": "fedora:latest",
+        "features": {
+            "doppler-cli": {}
+        }
+    },
+    "latest_on_devcontainer_base": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "doppler-cli": {}
         }
     },
-    "doppler_cli_version": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "pinned_version_on_ubuntu": {
+        "image": "ubuntu:latest",
         "features": {
-            "doppler-cli": {}
+            "doppler-cli": {
+                "version": "3.69.0"
+            }
         }
     }
 }
